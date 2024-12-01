@@ -1,0 +1,14 @@
+.WeatherInfo {
+  margin-top: 20px;
+}
+
+.WeatherInfo li {
+  text-align: start;
+  margin-left: 50px;
+}
+.temperature-container {
+  position: relative;
+  top: -8px;
+  font-size: 40px;
+  margin-right: 10px;
+}
