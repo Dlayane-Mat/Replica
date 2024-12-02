@@ -3,6 +3,7 @@ import WeatherFahrenheit from "./WeatherFahrenheit";
 import WeatherIcon from "./WeatherIcon";
 import WeatherForecast from "./WeatherForecast";
 import FormattedDate from "./FormattedDate";
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "./Weather.css";
 
@@ -31,7 +32,7 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
   function search() {
-    const apiKey = "6a0bac9dced487830ce6066218a5481c";
+    const apiKey = "0bd4693b39a661e4b0370fe772t7a9o3";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -51,8 +52,8 @@ export default function Weather(props) {
         <h1>{city}</h1>
         <FormattedDate date={weatherData.date} />
         <div className="current">
-          <span>Humidity:{weatherData.humidity}%</span>
-          <span>Wind:{weatherData.wind}km/h</span>
+          <span>💧♒︎:{weatherData.humidity}%</span>
+          <span>༄𖦹༄:{weatherData.wind}km/h</span>
         </div>
         <WeatherIcon code={weatherData.icon} size={52} />
         <span className="WeatherFahrenheit">
