@@ -6,6 +6,7 @@ import FormattedDate from "./FormattedDate";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "./Weather.css";
+import WeatherForecastPreview from "./WeatherForecastPreview";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -38,32 +39,44 @@ export default function Weather(props) {
   }
   if (weatherData.ready) {
     return (
-      <div className="Weather">
+      <div className="Weather text-center">
         <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="Enter city..."
-            autoFocus="on"
-            onChange={handleCityChange}
-            className="form-control"
-          />
-          <input type="submit" value="Search" className="btn" />
+          <div className="row">
+            <div className="col-9">
+              <input
+                type="search"
+                placeholder="Enter city..."
+                autoFocus="on"
+                onChange={handleCityChange}
+                className="form-control"
+              />
+            </div>
+            <div className="col-3">
+              <input type="submit" value="Search" className="btn w-100" />
+            </div>
+          </div>
         </form>
-        <h1>{city}</h1>
-        <FormattedDate date={weatherData.date} />
-        <div className="current">
-          <span>💧♒︎:{weatherData.humidity}%</span>
-          <span>༄𖦹༄:{weatherData.wind}km/h</span>
+        <div className="details">
+          <p>{city}</p>
+          <FormattedDate date={weatherData.date} />
         </div>
-        <WeatherIcon code={weatherData.icon} size={52} />
-        <span className="WeatherFahrenheit">
-          <WeatherFahrenheit celsius={weatherData.temperature} />
-        </span>
-        <div className="description">{weatherData.description}</div>
-        <WeatherForecast
-          coordinates={weatherData.coordinates}
-          city={weatherData.city}
-        />
+        <div className="weather-summary">
+          <WeatherIcon code={weatherData.icon} size={62} />
+          <span className="WeatherFahrenheit">
+            <WeatherFahrenheit celsius={weatherData.temperature} />
+          </span>
+          <div className="description">{weatherData.description}</div>
+        </div>
+        <div className="current">
+          <span>💧♒︎ : {weatherData.humidity}%</span>
+          <span>༄𖦹༄ : {weatherData.wind}km/h</span>
+        </div>
+        <div className="forecast">
+          <WeatherForecast
+            coordinates={weatherData.coordinates}
+            city={weatherData.city}
+          />
+        </div>
       </div>
     );
   } else {
