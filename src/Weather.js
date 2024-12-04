@@ -6,7 +6,6 @@ import FormattedDate from "./FormattedDate";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "./Weather.css";
-import WeatherForecastPreview from "./WeatherForecastPreview";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });

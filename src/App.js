@@ -8,8 +8,9 @@ export default function App() {
         <Weather defaultCity="South Africa" />
         <footer>
           This project was coded by{" "}
-          <a href="https://github.com/dlayane matjila"> Dlayane Matjila</a> on{" "}
-          <a href="#"> Github</a>
+          <a href="https://github.com/Dlayane-Mat"> Dlayane Matjila</a> on{" "}
+          <a href="https://github.com/Dlayane-Mat/Replica"> Github</a> and
+          hosted by Netlify
         </footer>
       </div>
     </div>
