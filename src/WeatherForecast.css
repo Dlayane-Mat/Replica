@@ -1,7 +1,7 @@
 .WeatherForecast {
-  text-align: center;
-  display: grid;
-  grid-template-rows: 20px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 .WeatherForecast .forecast-time {
   font-size: 16px;

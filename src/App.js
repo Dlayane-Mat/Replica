@@ -10,7 +10,8 @@ export default function App() {
           This project was coded by{" "}
           <a href="https://github.com/Dlayane-Mat"> Dlayane Matjila</a> on{" "}
           <a href="https://github.com/Dlayane-Mat/Replica"> Github</a> and
-          hosted by Netlify
+          hosted by{" "}
+          <a href="https://splendid-kitsune-cd4ccb.netlify.app">Netlify</a>
         </footer>
       </div>
     </div>
